@@ -11,19 +11,19 @@
 
 	<!-- jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
 	<title>Fridge</title>
 </head>
-<body>
+<body class="bg-gradient">
 	<div class="jumbotron text-center bg-gradient">
 		<h1 class="maintitle"><strong>Fridge</strong></h1>
 		<p><em>connecting food to people</em></p>
 	</div>
 
 	<!-- login form -->
-	<div class="container">
-    	<div class="row">
+	<div class="container" id="registration">
+		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
 				<div class="panel panel-login">
 					<div class="panel-heading">
@@ -45,7 +45,7 @@
 							<div class="col-lg-12">
 								<form id="donor-login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
 									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" required="required">
+										<input type="text" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" value="" required="required">
 									</div>
 									<div class="form-group">
 										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required="required">
@@ -73,7 +73,7 @@
 								</form>
 								<form id="charity-login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: none;">
 									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" required="required">
+										<input type="text" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" value="" required="required">
 									</div>
 									<div class="form-group">
 										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required="required">
@@ -101,10 +101,16 @@
 								</form>
 								<form id="register-form" action="https://phpoll.com/register/process" method="post" role="form" style="display: none;">
 									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" required="required">
+										<input type="text" name="orgname" id="orgname" tabindex="1" class="form-control" placeholder="Organization Name" value="" required="required">
 									</div>
 									<div class="form-group">
-										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="" required="required">
+										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" value="" required="required">
+									</div>
+									<div class="form-group">
+										<input type="text" name="address" id="address" tabindex="1" class="form-control" placeholder="Address" value="" required="required">
+									</div>
+									<div class="form-group">
+										<input type="text" name="website" id="website" tabindex="1" class="form-control" placeholder="Website" value="" required="required">
 									</div>
 									<div class="form-group">
 										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required="required">
@@ -114,12 +120,12 @@
 									</div>
 									<div class="form-group form-control" id="company-role">
 										I am a: &nbsp;
-											<label class="radio-inline"> 
-												<input type="radio" name="role" value="Donor" required="required"> Donor
-											</label>
-											<label class="radio-inline"> 
-												<input type="radio" name="role" value="Charity" required="required"> Charity
-											</label>
+										<label class="radio-inline"> 
+											<input type="radio" name="role" value="Donor" required="required"> Donor
+										</label>
+										<label class="radio-inline"> 
+											<input type="radio" name="role" value="Charity" required="required"> Charity
+										</label>
 									</div>
 									<div class="form-group">
 										<div class="row">
@@ -137,14 +143,32 @@
 		</div>
 	</div>
 
-	<div class="text-center">
-		<h2><em>About Fridge</em></h2>
+	<div class="about-container">
+		<div class="text-center">
+			<h1><em>About Fridge</em></h1>
+			<br>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<p class="lead">
+						San Francisco is missing 29 million meals per year, while Marin is missing 9 million meals per year.
+					</p>
+					<p>
+						Fridge aims to bring those numbers down by redistributing leftover food from private events, tech company lunches, grocery stores, and any other situation where pre-packaged food will go to waste.
+					</p>
+					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+				</div>
+			</div>
+			<br>
+			<div class="row small">
+				<div class="col-md-8 col-md-offset-2">
+					Copyright 2017 #team_skynet
+				</div>
+			</div>
+		</div>
 	</div>
-
-	<div class="container">
-
-	</div>
-
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
