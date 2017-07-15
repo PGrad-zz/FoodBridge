@@ -1,0 +1,23 @@
+{
+  "name": "foodbridge",
+  "version": "1.0.0",
+  "description": "The backend for the FoodBridge app",
+  "main": "index.js",
+  "dependencies": {
+    "node": "^0.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PGrad/FoodBridge.git"
+  },
+  "author": "FoodBridge, Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PGrad/FoodBridge/issues"
+  },
+  "homepage": "https://github.com/PGrad/FoodBridge#readme"
+}
