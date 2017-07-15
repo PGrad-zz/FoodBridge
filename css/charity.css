@@ -1,0 +1,26 @@
+.list-group-item { 
+	height: 125px;
+}
+
+.left {
+	 /*#float: left;*/
+}
+
+.fridgeHeader{
+	height: 150px;
+	background-color: green;
+}
+.right {
+	 float: right;
+}
+
+.bottom{
+	float: left;
+
+}
+.bottom {
+	display: block;
+}
+.description{
+	color: ;
+}
