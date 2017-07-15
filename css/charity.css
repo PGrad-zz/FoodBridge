@@ -1,4 +1,4 @@
-.list-group-item { 
+.list-group-item {
 	height: 125px;
 }
 
@@ -23,4 +23,24 @@
 }
 .description{
 	color: ;
+}
+/* Charity Side-Bar */
+p{
+	margin: 0;
+	padding: 0;
+}
+p.post-name{
+	font-size: 24pt;
+	font-weight: bold;
+}
+p.post-donor{
+	font-size: 14pt;
+	font-style: italic;
+}
+
+.claimed-btn, .completed-btn, .expired-btn{
+	width: 100%;
+}
+.posting{
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
