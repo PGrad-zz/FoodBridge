@@ -4,11 +4,14 @@
   "description": "The backend for the FoodBridge app",
   "main": "index.js",
   "dependencies": {
-    "formidable": "^1.1.1",
-    "node": "^0.0.0"
+    "node": "^0.0.0",
+    "formidable": "1.1.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "1.11.0"
+  },
   "scripts": {
+    "app": "nodemon index.js",
     "test": "node index.js"
   },
   "repository": {
