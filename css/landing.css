@@ -1,4 +1,4 @@
-/* REGISTRATION */
+/* REGISTRATION */	
 .panel-login {
 	border-color: #ccc;
 	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
@@ -21,7 +21,7 @@
 	transition: all 0.1s linear;
 }
 .panel-login>.panel-heading a.active{
-	color: #029f5b;
+	color: #43e97b;
 }
 .panel-login>.panel-heading hr{
 	margin-top: 10px;

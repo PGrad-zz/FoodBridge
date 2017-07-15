@@ -1,0 +1,28 @@
+body {
+	font-family: "Open Sans";
+}
+
+/* the heading font for the logo */
+.maintitle {
+	font-family: "Patua One";
+}
+
+/* for adding a cool gradient to a jumbotron bg or a button */
+.bg-gradient {
+	background-color: rgba(0, 0, 0, 0);
+	background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+	color: white;
+	border: none;
+}
+
+.gradient-green {
+	color: white;
+	border: none;
+	background-color: #43e97b;
+}
+
+.gradient-blue {
+	color: white;
+	border: none;
+	background-color: #38f9d7;
+}
