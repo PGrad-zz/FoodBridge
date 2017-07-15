@@ -95,4 +95,14 @@
 	border-color: #1CA347;
 }
 
+a {
+	cursor: pointer;
+}
+
+#company-role {
+	height: 45px;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+}
 /* END REGISTRATION */
