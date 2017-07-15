@@ -1,0 +1,5 @@
+{
+	"user": foodbridgeadmin,
+	"password": foodbridgepass,
+	"uri": ds161162.mlab.com:61162/heroku_k6hm6nnj
+}
