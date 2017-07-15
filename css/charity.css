@@ -1,9 +1,24 @@
-.list-group-item { 
-	height: 125px;
+.jumbotron{
+    padding: 0.5em 0.6em;
+    p {
+        font-size: 1.2em;
+        .btn {
+            padding: 0.5em;
+        }
+    }
+}
+.jumbotron h1 {
+    /*font-size: 2em;*/
+    margin-bottom: 0px;
+    margin-top: 5px;
 }
 
 .left {
 	 /*#float: left;*/
+}
+
+.fieldType {
+	text-align:right;
 }
 
 .fridgeHeader{
