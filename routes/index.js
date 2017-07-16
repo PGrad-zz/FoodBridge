@@ -65,10 +65,6 @@ router.post('/charity/login', function(req, res){
 				console.log("password wrong");
 				res.redirect("../");
 			}
-<<<<<<< HEAD
-=======
-
->>>>>>> 948016f51a306f0e9ec3d237e209ffafa3205840
 		}
 	})
 });
