@@ -10,7 +10,7 @@ var fs = require("fs");
 var queryHandlers = require("./query_handlers.js");
 
 var index = require('./routes/index');
-var orders = require('./routes/events');
+var orders = require('./routes/orders');
 
 var app = express();
 
