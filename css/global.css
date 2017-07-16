@@ -3,6 +3,7 @@
 	--gradient: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
 	--gradientgreen: #43e97b;
 	--gradientblue: #38f9d7;
+	--gradientred: #d32d39;
 	--std-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
 	--hov-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.3);
 	--add-shadow: 0px 5px 6px 0px rgba(155, 175, 242, 0.7);
@@ -100,6 +101,25 @@ p {
 }
 .white-btn:active {
 	background-color: rgba(255, 255, 255, .4);
+}
+
+.red-btn {
+	color: white;
+	background-color: var(--gradientred);
+	border: none;
+	cursor: pointer;
+	transition: .2s;
+	padding: 14px;
+	height: auto;
+	text-transform: uppercase;
+	border-radius: var(--std-radius);
+}
+.red-btn:hover {
+	background-color: var(--gradientred);
+}
+.red-btn:active {
+	background-color: var(--gradientred);
+	transform: translateY(.1rem);
 }
 
 /*fix table border-top problems */
