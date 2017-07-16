@@ -8,13 +8,15 @@ router.get('/', function(req, res, next) {
 
 router.post('/donor/login', function(req, res){
 	var accnt = req.db.collection("account");
-	accnt.find({email: req.body.email}, function(err, record){
+	accnt.find({email: req.body.email}).toArray(function(err, record){
 		if(err){
 			console.log("couldn't find record, redirecting");
 			res.redirect("../");
 		}
 		else{
-			if(record.password == req.body.password){
+			console.log(record[0].password);
+			console.log(req.body.password);
+			if(record[0].password == req.body.password){
 				console.log("password correct");
 				res.redirect("../posts");
 			}
@@ -29,13 +31,15 @@ router.post('/donor/login', function(req, res){
 
 router.post('/charity/login', function(req, res){
 	var accnt = req.db.collection("account");
-	accnt.find({email: req.body.email} , function(err, record){
+	accnt.find({email: req.body.email}).toArray(function(err, record){
 		if(err){
 			console.log("couldn't find record, redirecting");
 			res.redirect("../");
 		}
 		else{
-			if(record.password == req.body.password){
+			console.log(record[0].password);
+			console.log(req.body.password);
+			if(record[0].password == req.body.password){
 				console.log("password correct");
 				res.redirect("../posts");
 			}
@@ -43,6 +47,10 @@ router.post('/charity/login', function(req, res){
 				console.log("password wrong");
 				res.redirect("../");
 			}
+<<<<<<< HEAD
+=======
+			
+>>>>>>> a37e632a073517af6bc40f873889467f0f5687c7
 		}
 	})
 });
@@ -127,6 +135,7 @@ router.post('/post/new', function(req, res, next){
 		claimant: "none",
 		expired: false,
 		phone: req.body.phone,
+		status: "open",
 		created: new Date()
 	};
 	console.log(newPost);
@@ -135,6 +144,10 @@ router.post('/post/new', function(req, res, next){
 	});
 	res.redirect('../posts');
 });
+
+router.post('/post/update', function(req, res){
+
+})
 
 router.get('/donor', function(req, res, next) {
 	console.log(req.db.collection);
