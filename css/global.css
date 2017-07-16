@@ -142,6 +142,7 @@ p {
 .panel {
 	border-radius: var(--std-radius);
 	box-shadow: var(--std-shadow);
+	border: none;
 }
 
 /* highlighted text */
