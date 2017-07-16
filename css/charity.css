@@ -76,3 +76,12 @@ li {
   box-shadow: var(--add-shadow);
   transform: translateY(-.1rem);
 }
+.adding-btn{
+	color: var(--gradientgreen);
+}
+
+.submit-text{
+	font-size: 20pt;
+	margin-top: 1.5rem;
+	margin-left: -2rem;
+}
