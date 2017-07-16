@@ -10,7 +10,7 @@
 .jumbotron h1 {
     /*font-size: 2em;*/
     margin-bottom: 0px;
-		margin-left: 20px;
+	margin-left: 20px;
     margin-top: 5px;
 }
 
@@ -19,7 +19,7 @@ body {
 }
 
 .logoutButton {
-		position:absolute;
+	position:absolute;
     top:0;
     right:0;
     margin-top: 35px;
@@ -60,12 +60,15 @@ p.post-donor{
 	border-width: 2px !important;
 }
 .posting{
-	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-	margin-bottom: 4px;
+	box-shadow: var(--std-shadow);
+	margin-bottom: 1rem;
+	cursor: pointer;
+	transition: .1s;
 }
 
 .posting:hover{
-	background-color: #e6e6e6;
+	box-shadow: var(--hov-shadow);
+	transform: translateY(-.1rem);
 }
 
 li{
