@@ -144,7 +144,7 @@ router.post('/post/new', function(req, res, next){
 		time: req.body.time_type,
 		quantity: req.body.quantity,
 		rating: 0,
-		organization: "none",
+		organization: app.locals.user.name,
 		description: req.body.description,
 		claimant: "none",
 		expired: false,
