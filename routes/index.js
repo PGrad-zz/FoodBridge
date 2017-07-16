@@ -10,8 +10,8 @@ router.get('/', function(req, res, next) {
 router.get('/posts', function(req, res, next) {
 	var posts = req.db.collection("order").find().toArray(function(err, results){
 		console.log({posts: results});
+		res.render('posts', {posts: results});
 	});
-  	res.render('posts');
 });
 
 router.get('/post/new', function(req, res, next){
