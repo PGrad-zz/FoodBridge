@@ -66,3 +66,7 @@ p.post-donor{
 li{
 	display: none;
 }
+
+.panel.posting {
+	border: none;
+}
