@@ -3,3 +3,6 @@ node_modules/
 ./package-lock.json
 ./mongodb_config_local.json
 data/*
+package.json
+package-lock.json
+mongodb_config_local.json
