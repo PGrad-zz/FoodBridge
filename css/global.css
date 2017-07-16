@@ -69,9 +69,10 @@ p {
 	border: none;
 	cursor: pointer;
 	transition: .2s;
-	padding: 14px 0;
+	padding: 14px;
 	height: auto;
 	text-transform: uppercase;
+	border-radius: var(--std-radius);
 }
 .gradient-btn:hover {
 	background-color: var(--gradientblue);
@@ -79,4 +80,32 @@ p {
 .gradient-btn:active {
 	background-color: var(--gradientgreen);
 	transform: translateY(.1rem);
+}
+
+/* buttons on a gradient background */
+.white-btn {
+	color: white;
+	border-radius: var(--std-radius);
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, 0);
+	cursor: pointer;
+	padding: 14px;
+	height: auto;
+	text-transform: uppercase;
+	transition: .2s;
+}
+.white-btn:hover {
+	background-color: rgba(255, 255, 255, .2);
+}
+.white-btn:active {
+	background-color: rgba(255, 255, 255, .4);
+}
+
+/*fix table border-top problems */
+.table-user-information>tbody>tr:first-child>td {
+	border-top: none;
+}
+
+.panel {
+	border-radius: var(--std-radius);
 }
