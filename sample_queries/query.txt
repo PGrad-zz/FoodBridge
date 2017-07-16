@@ -1,0 +1,8 @@
+Get record with property matching value:
+db.foodbridge.aggregate([{ "$unwind": "$organization.values" }, {"$match": {"organization.values.type": "vendor"} }, { $group: {_id:"result", values: {$push: {value: "$organization.values"} } } }]);
+RETURNS:
+{_id:"result", values: [{value: <record>}...]}
+Get list of all records in document:
+db.foodbridge.aggregate([{"$group": {"_id": {"value": "$<document>.values"}}}, {"$match": {"_id.value": {"$ne": null}}}]);
+RETURNS:
+{ "_id": { "value": [ <record>...] } }
