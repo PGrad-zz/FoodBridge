@@ -1,6 +1,6 @@
 Assuming <record> is a json object of type
 Get record with property matching value:
-db.foodbridge.aggregate([{ "$unwind": "$organization.values" }, {"$match": {"organization.values.type": "vendor"} }, { $group: {_id:"result", values: {$push: {value: "$organization.values"} } } }]);
+db.foodbridge.aggregate([{ "$unwind": "$<document>.values" }, {"$match": {"<document>.values.<property>": <value>} }, { $group: {_id:"result", values: {$push: {value: "$<document>.values"} } } }]);
 RETURNS:
 {_id:"result", values: [{value: <record>}...]}
 Get list of all records in document:
