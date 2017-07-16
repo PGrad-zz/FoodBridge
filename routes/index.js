@@ -128,7 +128,7 @@ router.post('/register', function(req, res){
 router.get('/posts', function(req, res, next) {
 	var posts = req.db.collection("order").find().toArray(function(err, results){
 		console.log(app.locals.user);
-		res.render('posts', {posts: results, user: app.locals.user});
+		res.render('posts', {posts: results.reverse(), user: app.locals.user});
 	});
 });
 
@@ -177,7 +177,7 @@ router.post('/post/update', function(req, res){
 					console.log("err: " + error.status);
 				}
 				else{
-					console.log("changed status");	
+					console.log("changed status");
 				}
 			})
 		}
@@ -190,7 +190,7 @@ router.post('/post/update', function(req, res){
 
 router.get('/donor', function(req, res, next) {
   // add logic for specific organizations
-  var posts = req.db.collection("order").find().toArray(function(err, results){
+  var posts = req.db.collection("order").find({organization: app.locals.user.name}).toArray(function(err, results){
 		console.log({posts: results});
   		res.render('donor', {user: app.locals.user, posts: results});
   })
