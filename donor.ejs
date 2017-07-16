@@ -58,7 +58,7 @@
             <span class='col-md-8'>
                 <ul><li>
                 <div class="panel panel-default adding posting">
-                    <a href="post/index.ejs" class="no-deco">
+                    <a href="post/new" class="no-deco">
                         <div class='panel-body'>
                             <span class='col-md-10'><p class="post-name submit-text">Create a New Posting</p></span>
                         </div>
@@ -75,9 +75,13 @@
                             <div class='post-description'>The pizza was from Dominoes. There are three ...</div>
                         </span>
                         <span class='col-md-4'>
-                            <button type="button" class="btn gradient-btn claimed-btn"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Claimed</button><br>
-                            <button type="button" class="btn gradient-btn completed-btn"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Completed</button><br>
-                            <button type="button" class="btn red-btn expired-btn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Expired</button>
+                           <form action="/posts/update" method="post">
+                                <button type="button" class="btn gradient-btn claimed-btn" name ="claimed"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Claimed</button>
+                            </form>
+                            <br>
+                            <form action="/posts/update" method="post">
+                            <button type="button" class="btn red-btn expired-btn" name ="expired"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Expired</button>
+                            </form>
                         </span>
                         </span>
                     </div>
