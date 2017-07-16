@@ -194,7 +194,7 @@ router.get('/donor', function(req, res, next) {
   // add logic for specific organizations
   var posts = req.db.collection("order").find({organization: app.locals.user.name}).toArray(function(err, results){
 		console.log({posts: results});
-  		res.render('donor', {user: app.locals.user, posts: results});
+  		res.render('donor', {user: app.locals.user, posts: results.reverse()});
   })
 });
 
