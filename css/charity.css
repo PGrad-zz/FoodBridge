@@ -30,6 +30,10 @@ ul {
 	color: #999;
 }
 
+.post-contact {
+	cursor: text;
+}
+
 /* Charity Side-Bar */
 p{
 	margin: 0;
@@ -106,7 +110,12 @@ li {
 	font-size: 24pt;
 	cursor: pointer !important;
 }
-.expander.flipped {
+
+.expander {
+	color: #bbb;
+}
+
+.expander.flipped:hover {
 	color: var(--gradientgreen);
 }
 
@@ -114,6 +123,10 @@ li {
 	transform: rotate(180deg);
 }
 
-.expander {
-	display: none;
+.material-icons.expander:not(.flipped), .posting:not(:hover) .material-icons.expander {
+	display: none !important;
+}
+
+.pickup-time {
+	color: #bbb;
 }

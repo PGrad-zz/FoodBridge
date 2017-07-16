@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Donor | Fridge</title>
+    <title>Donor Management | Fridge</title>
 </head>
 
 <body>
@@ -53,7 +53,7 @@
                 </div>
             </span>
             <span class='col-md-8'>
-                <ul>
+                <ul id="post-container">
                     <li>
                         <div class="panel panel-default adding posting">
                             <a href="post/new" class="no-deco">
@@ -86,10 +86,10 @@
                                     </span>
 
                                 </div>
+                                <i class="material-icons bottomright expander" onclick="contractPost(this);">expand_more</i>
                             </div>
                         </li>
                     <% }); %>
-
                 </ul>
             </span>
         </div>
@@ -99,6 +99,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="js/charity.js"></script>
+    <script src="js/global.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
 </body>
 
