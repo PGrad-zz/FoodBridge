@@ -4,7 +4,21 @@ var mongo = require('mongodb');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+	console.log(app.locals.user);
+	if(app.locals.user != null){
+		if (app.locals.user.organization == "Donor"){
+			res.redirect("/donor")
+		} else {
+			res.redirect("/posts")
+		}
+	}
+
+	res.render('index');
+});
+
+router.get('/logout', function(req, res, next) {
+	app.locals.user = null;
+	res.redirect("/");
 });
 
 router.post('/donor/login', function(req, res){
@@ -19,7 +33,8 @@ router.post('/donor/login', function(req, res){
 			console.log(req.body.password);
 			if(record[0].password == req.body.password){
 				console.log("password correct");
-				res.redirect("../posts");
+				app.locals.user = record[0];
+				res.redirect("../donor");
 			}
 			else{
 				console.log("password wrong");
@@ -40,14 +55,20 @@ router.post('/charity/login', function(req, res){
 		else{
 			console.log(record[0].password);
 			console.log(req.body.password);
+			console.log(record[0]);
 			if(record[0].password == req.body.password){
 				console.log("password correct");
+				app.locals.user = record[0];
 				res.redirect("../posts");
 			}
 			else{
 				console.log("password wrong");
 				res.redirect("../");
 			}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 948016f51a306f0e9ec3d237e209ffafa3205840
 		}
 	})
 });
@@ -110,13 +131,13 @@ router.post('/register', function(req, res){
 
 router.get('/posts', function(req, res, next) {
 	var posts = req.db.collection("order").find().toArray(function(err, results){
-		console.log({posts: results});
-		res.render('posts', {posts: results});
+		console.log(app.locals.user);
+		res.render('posts', {posts: results, user: app.locals.user});
 	});
 });
 
 router.get('/post/new', function(req, res, next){
-	res.render('post/index');
+	res.render('post/index', {user: app.locals.user});
 });
 
 router.post('/post/new', function(req, res, next){
@@ -127,7 +148,7 @@ router.post('/post/new', function(req, res, next){
 		time: req.body.time_type,
 		quantity: req.body.quantity,
 		rating: 0,
-		organization: "none",
+		organization: app.locals.user.name,
 		description: req.body.description,
 		claimant: "none",
 		expired: false,
@@ -175,8 +196,8 @@ router.get('/donor', function(req, res, next) {
   // add logic for specific organizations
   var posts = req.db.collection("order").find().toArray(function(err, results){
 		console.log({posts: results});
-		res.render('donor', {posts: results});
-	});
+  		res.render('donor', {user: app.locals.user, posts: results});
+  })
 });
 
 module.exports = router;
