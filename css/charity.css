@@ -106,9 +106,10 @@ li {
 .material-icons.bottomright {
 	position: absolute;
 	bottom: 1rem;
-	right: 1rem;
+	right: 2rem;
 	transition: .15s;
 	font-size: 24pt;
+	cursor: pointer;	
 }
 
 .expander {
@@ -153,3 +154,7 @@ li {
 	border-color: #f0f0f0;
 }
 
+.posting.expanded {
+	padding-bottom: 3rem;
+	cursor: default;
+}
