@@ -1,0 +1,5 @@
+node_modules/
+*.un~
+./package-lock.json
+./mongodb_config_local.json
+./data/
