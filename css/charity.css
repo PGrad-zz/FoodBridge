@@ -118,6 +118,10 @@ li {
 	transform: rotate(180deg);
 }
 
-.material-icons.expander {
-	display: none;
+.material-icons.expander:not(.flipped), .posting:not(:hover) .material-icons.expander {
+	display: none !important;
+}
+
+.pickup-time {
+	color: #bbb;
 }
