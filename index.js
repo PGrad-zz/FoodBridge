@@ -78,7 +78,7 @@ fs.stat("./mongodb_config_local.json", function(fs_err, stats){
 					console.log(req.db);
 					next();
 				})
-				app.listen(8888);
+				app.listen(process.env.port || 8888);
 			}
 			else {
 				console.log(err);
