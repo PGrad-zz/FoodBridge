@@ -16,10 +16,7 @@
 </head>
 
 <body>
-    <div class="jumbotron text-left bg-gradient">
-        <h1 class="maintitle"><strong>Fridge</strong></h1>
-        <span type="button" class="white-btn">Log Out</span>
-    </div>
+  <% include ./templates/header.html %>
     <div class="container">
         <div class="row">
             <span class="col-md-4">
@@ -29,11 +26,11 @@
                             <tbody>
                               <tr>
                                 <td>Donor:</td>
-                                <td>Big Wasteful Company, Inc</td>
+                                <td> <%= user.name %> </td>
                               </tr>
                               <tr>
                                 <td>Address:</td>
-                                <td>Dreary Lane</td>
+                                <td><%= user.address %></td>
                               </tr>
                               <tr>
                                 <td>Ratings:</td>
@@ -44,7 +41,7 @@
                               </tr>
                               <tr>
                                 <td>Email:</td>
-                                <td><a href="mailto:info@support.com">muffins@muffins.com</a></td>
+                                <td><a href="mailto:<%= user.name %>"><%= user.email %></a></td>
                               </tr>
                                 <td>Phone Number:</td>
                                 <td>1-805-111-1111</td>
@@ -59,37 +56,38 @@
                 <ul id="post-container">
                     <li>
                         <div class="panel panel-default adding posting">
-                            <a href="post/index.ejs" class="no-deco">
+                            <a href="post/new" class="no-deco">
                                 <div class='panel-body'>
                                     <span class='col-md-10'><p class="post-name submit-text">Create a New Posting</p></span>
                                 </div>
                             </a>
                         </div>
                     </li>
-                    <li>
-                        <div class="panel panel-default posting" onclick="expandPost(this);">
-                            <div class="panel-body ">
-                                <span class='col-md-8'>
-                                    <p class='post-name'>Extra 🅱epperoni Pizza</p>
-                                    <p class='post-donor'> Lyft, Inc </p>
-                                    <p>12 and a half pizzas</p>
-                                    <div class='post-description'>The pizza was from Dominoes. There are three ...</div>
-                                    <div class="panel-hidden">
-                                        <br>
-                                        <div class="post-description-expanded">
-                                            The pizza was from Domino's. There are three stacks of boxes at about five pounds per stack. If you're coming in from Market Street, take a left on Spear and come in through the back entrance. 
-                                        </div>
-                                        <br>
-                                        <button type="button" class="btn gradient-btn claimed-btn"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Claimed</button><br>
-                                        <button type="button" class="btn gradient-btn completed-btn"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Completed</button><br>
-                                        <button type="button" class="btn red-btn expired-btn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Expired</button>
-                                    </div>
+                    <% posts.forEach(function(post) { %>
+                        <li>
+                            <div class="panel panel-default posting">
+                                <div class="panel-body">
+                                    <span class='col-md-8'>
+                                                <p class='post-name'><%= post.title%></p>
+                                                <p class='post-donor'> <%= post.organization %></p>
+                                                <p><%= post.quantity %></p>
+                                                <div class='post-description'><%= post.description.slice(0, 15) %></div>
+                                            </span>
+                                    <span class='col-md-4'>
+                                               <form action="/posts/update" method="post">
+                                                    <button type="button" class="btn gradient-btn claimed-btn" name ="claimed"  list_id="<%= post._id %>" onclick="sendRequest(this, 'claimed');"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Claimed</button>
+                                    </form>
+                                    <br>
+                                    <form action="/posts/update" method="post">
+                                        <button type="button" class="btn red-btn expired-btn" name="expired" list_id="<%= post._id %>" onclick="sendRequest(this, 'expired');"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Expired</button>
+                                    </form>
+                                    </span>
 
-                                </span>
+                                </div>
+                                <i class="material-icons bottomright expander" onclick="contractPost(this);">expand_more</i>
                             </div>
-                            <i class="material-icons bottomright expander" onclick="contractPost(this);">expand_more</i>
-                        </div>
-                    </li>
+                        </li>
+                    <% }); %>
                 </ul>
             </span>
         </div>
