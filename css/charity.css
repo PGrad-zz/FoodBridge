@@ -131,6 +131,7 @@ li {
 	color: #bbb;
 }
 
+
 .btn {
 	display: flex;
     justify-content: center;
@@ -143,3 +144,12 @@ li {
 .btn:hover {
 	color: white;
 }
+
+.map{
+  width: 95%;
+  margin-left: 2.5%;
+	border-right-width: : 1px;
+	border-bottom-width: 1px;
+	border-color: #f0f0f0;
+}
+
