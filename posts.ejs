@@ -73,10 +73,12 @@
                                     <br>
                                      <p class='post-contact'> Contact at: <%= post.phone %></p>
                                      <br>
-                                     <p class='post-contact'> <%=post.time %> </p>
+                                     <p class='post-contact'> <%=post.time.replace("T"," ") %> </p>
                                      <br>
                                 </span>
+
                                 <div class='panel-hidden'>
+                                <br>
                                   <% var mapSrc = "https://www.google.com/maps/embed/v1/place?q=" + encodeURIComponent(post.pickup_location) + "&zoom=17&key=AIzaSyC2m6JBE6EvL3t4AqWUeDqRN3FALo8yuw4"; %>
                                   <iframe src=<%= mapSrc %> class='map' height='300px' frameborder="0"></iframe>
                                 </div>

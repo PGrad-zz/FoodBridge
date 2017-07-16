@@ -208,3 +208,7 @@ a.no-deco:visited {
 		transform: scale(2.5);
 	}
 }
+
+iframe.map {
+	margin-top: 1rem;
+}
