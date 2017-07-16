@@ -6,6 +6,8 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <!-- our css -->
     <link rel="stylesheet" type="text/css" href="css/charity.css">
     <link rel="stylesheet" type="text/css" href="css/global.css">
@@ -79,7 +81,31 @@
                                      <br>
                                 </span>
                             </div>
-
+                            <i class="material-icons bottomright expander" onclick="contractPost(this);">expand_more</i>
+                        </div>
+                    </li>
+                                       <li>
+                        <div class="panel panel-default posting ripple-container" onclick="expandPost(this);">
+                            <div class="panel-body rippler">
+                                <span class='col-md-8'>
+                                    <p class='post-name'>Extra Pepperoni Pizza</p>
+                                    <p class='post-donor'> Lyft, Inc </p>
+                                    <p>12 and a half pizzas</p>
+                                    <div class='post-description'>The pizza was from Domino's. There are three...</div>
+                                    <div class="panel-hidden">
+                                    <br>
+                                        <div class="post-description-expanded">
+                                            The pizza was from Domino's. There are three stacks of boxes at about five pounds per stack. If you're coming in from Market Street, take a left on Spear and come in through the back entrance. 
+                                        </div>
+                                    </div>
+                                </span>
+                                <span class='col-md-4'>
+                                    <br>
+                                     <p class='post-contact'> Contact at: 818-209-1272</p>
+                                     <br>
+                                </span>
+                            </div>
+                            <i class="material-icons bottomright expander" onclick="contractPost(this);">expand_more</i>
                         </div>
                     </li>
                     <!--<li>

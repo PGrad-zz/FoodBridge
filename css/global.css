@@ -194,18 +194,17 @@ a.no-deco:visited {
 /*.ink styles - the elements which will create the ripple effect. The size and position of these elements will be set by the JS code. Initially these elements will be scaled down to 0% and later animated to large fading circles on user click.*/
 .ink {
 	display: block; position: absolute;
-	background: var(--gradientblue);
+	background: var(--gradientgreen);
 	opacity: .5;
 	border-radius: 100%;
 	transform: scale(0);
 }
 /*animation effect*/
-.ink.animate {animation: ripple 0.6s ease-in;}
+.ink.animate {animation: ripple 0.5s ease-in;}
 @keyframes ripple {
 	/*scale the element to 250% to safely cover the entire link and fade it out*/
-	100% {
+	to {
 		opacity: 0; 
 		transform: scale(2.5);
-		background: var(--gradientgreen);
 	}
 }
