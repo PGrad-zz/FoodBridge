@@ -4,7 +4,7 @@ function fadeIn(i, elements, duration, callback){
             else
                 elements.eq(i).fadeIn(duration, function(){
                    fadeIn(i+1, elements, duration, callback);
-            });        
+            });
         }
 
-fadeIn(0, $('ul li'), 250, function(){console.log("animation finished!");});
+fadeIn(0, $('ul li'), 250)
