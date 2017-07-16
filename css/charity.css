@@ -27,7 +27,7 @@ ul {
 }
 
 .post-description{
-	color: #cccccc
+	color: #ccc;
 }
 
 /* Charity Side-Bar */
@@ -90,4 +90,10 @@ li {
 }
 .panel:hover .submit-text{
 	color: var(--gradientgreen);
+}
+
+/* panel expansion stuff */
+/* the hidden body text of the panel */
+.panel-hidden {
+	display: none;
 }

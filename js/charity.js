@@ -1,4 +1,4 @@
-/*function fadeIn(i, elements, duration, callback){
+function fadeIn(i, elements, duration, callback){
             if(i >= elements.length)
                 $.isFunction(callback) && callback();
             else
@@ -8,7 +8,9 @@
         }
 
 fadeIn(0, $('ul li'), 250)
-*/
+
+
+/*
 $(document).ready(function() {
 	var testBlob = "                    <li>\
                         <div class=\"panel panel-default posting\">\
@@ -35,4 +37,13 @@ $(document).ready(function() {
     		clearInterval(tempInterval);
     	}
     }, 50)
-})
+})*/
+
+function expandPost(domObject) {
+    $(domObject).find('.post-description').slideToggle(150);
+    $(domObject).find('.panel-hidden').slideToggle(150);
+}
+
+function contractPost(domObject) {
+
+}

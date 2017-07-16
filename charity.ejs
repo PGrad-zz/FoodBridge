@@ -58,24 +58,31 @@
             </span>
             <span class='col-md-8' >
                 <ul id="post-container">
-                   <!-- <li>
-                        <div class="panel panel-default posting">
-                            <div class="panel-body">
+                   <li>
+                        <div class="panel panel-default posting ripple-container" onclick="expandPost(this);">
+                            <div class="panel-body rippler">
                                 <span class='col-md-8'>
                                     <p class='post-name'>Extra Pepperoni Pizza</p>
                                     <p class='post-donor'> Lyft, Inc </p>
                                     <p>12 and a half pizzas</p>
-                                    <div class='post-description'>The pizza was from Dominoes. There are three ...</div>
+                                    <div class='post-description'>The pizza was from Domino's. There are three...</div>
+                                    <div class="panel-hidden">
+                                    <br>
+                                        <div class="post-description-expanded">
+                                            The pizza was from Domino's. There are three stacks of boxes at about five pounds per stack. If you're coming in from Market Street, take a left on Spear and come in through the back entrance. 
+                                        </div>
+                                    </div>
                                 </span>
                                 <span class='col-md-4'>
                                     <br>
-                                     <p class='post-contact'> Contact at: </p>
+                                     <p class='post-contact'> Contact at: 818-209-1272</p>
                                      <br>
                                 </span>
                             </div>
+
                         </div>
                     </li>
-                    <li>
+                    <!--<li>
                         <div class="panel panel-default posting">
                             <div class="panel-body">
                                 <span class='col-md-8'>
@@ -86,7 +93,7 @@
                                 </span>
                                 <span class='col-md-4'>
                                     <br>
-                                     <p class='post-contact'> Contact at: </p>
+                                     <p class='post-contact'> Contact at: 818-209-127</p>
                                      <br>
                                 </span>
                             </div>
@@ -103,7 +110,7 @@
                                 </span>
                                 <span class='col-md-4'>
                                     <br>
-                                     <p class='post-contact'> Contact at: </p>
+                                     <p class='post-contact'> Contact at: 818-209-127</p>
                                      <br>
                                 </span>
                             </div>
@@ -121,6 +128,7 @@
 
 
     <script src="js/charity.js"></script>
+    <script src="js/global.js"></script>
 </body>
 
 </html>
