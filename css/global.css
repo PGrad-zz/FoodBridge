@@ -44,3 +44,8 @@ p {
 		transform: translateY(5rem);
 	}
 }
+
+/* for google material design icons */
+.large-icon {
+	font-size: 48pt !important;
+}
