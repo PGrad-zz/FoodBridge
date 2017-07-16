@@ -12,7 +12,9 @@ var queryHandlers = require("./query_handlers.js");
 var index = require('./routes/index');
 var orders = require('./routes/orders');
 
-var app = express();
+//its global without var
+app = express();
+app.locals.user = null;
 
 // view engine setup
 app.set('views', path.join(__dirname, ""));

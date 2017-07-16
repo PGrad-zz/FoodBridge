@@ -3,8 +3,18 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+	console.log(app.locals.user);
+	if(app.locals.user != null){
+		if (app.locals.user.organization == "Donor"){
+			res.redirect("/donor")
+		} else {
+			res.redirect("/posts")
+		}
+	}
+
+	res.render('index');
 });
+
 
 router.post('/donor/login', function(req, res){
 	var accnt = req.db.collection("account");
@@ -18,7 +28,8 @@ router.post('/donor/login', function(req, res){
 			console.log(req.body.password);
 			if(record[0].password == req.body.password){
 				console.log("password correct");
-				res.redirect("../posts");
+				app.locals.user = record[0];
+				res.redirect("../donor");
 			}
 			else{
 				console.log("password wrong");
@@ -39,18 +50,17 @@ router.post('/charity/login', function(req, res){
 		else{
 			console.log(record[0].password);
 			console.log(req.body.password);
+			console.log(record[0]);
 			if(record[0].password == req.body.password){
 				console.log("password correct");
+				app.locals.user = record[0];
 				res.redirect("../posts");
 			}
 			else{
 				console.log("password wrong");
 				res.redirect("../");
 			}
-<<<<<<< HEAD
-=======
-			
->>>>>>> a37e632a073517af6bc40f873889467f0f5687c7
+
 		}
 	})
 });
@@ -113,13 +123,13 @@ router.post('/register', function(req, res){
 
 router.get('/posts', function(req, res, next) {
 	var posts = req.db.collection("order").find().toArray(function(err, results){
-		console.log({posts: results});
-		res.render('posts', {posts: results});
+		console.log(app.locals.user);
+		res.render('posts', {posts: results, user: app.locals.user});
 	});
 });
 
 router.get('/post/new', function(req, res, next){
-	res.render('post/index');
+	res.render('post/index', {user: app.locals.user});
 });
 
 router.post('/post/new', function(req, res, next){
@@ -151,7 +161,7 @@ router.post('/post/update', function(req, res){
 
 router.get('/donor', function(req, res, next) {
 	console.log(req.db.collection);
-  res.render('donor');
+  res.render('donor', {user: app.locals.user});
 });
 
 module.exports = router;
