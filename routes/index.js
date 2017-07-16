@@ -101,6 +101,7 @@ router.post('/register', function(req, res){
 			else{
 				accnt.insert(account, function(err, data){
 				console.log("Inserting account record");
+				app.locals.user = account;
 				});
 			}
 		}
@@ -118,6 +119,7 @@ router.post('/register', function(req, res){
 			else{
 				orgs.insert(organization, function(err, data){
 				console.log("Inserting organization record");
+
 				res.redirect("../posts");
 				});
 			}
