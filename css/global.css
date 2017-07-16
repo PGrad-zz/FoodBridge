@@ -1,3 +1,15 @@
+/* root global variables */
+:root {
+	--gradient: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+	--gradientgreen: #43e97b;
+	--gradientblue: #38f9d7;
+	--gradientred: #d32d39;
+	--std-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	--hov-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+	--add-shadow: 0px 5px 6px 0px rgba(155, 175, 242, 0.7);
+	--std-radius: 3px;
+}
+
 html {
 	margin: 0;
 	padding: 0;
@@ -12,26 +24,23 @@ body {
 /* the heading font for the logo */
 .maintitle {
 	font-family: "Patua One";
+	cursor: default;
+	/* no selecting */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+	                      supported by Chrome and Opera */
 }
 
-/* for adding a cool gradient to a jumbotron bg or a button */
+/* for adding the standard gradient to a jumbotron bg */
 .bg-gradient {
 	background-color: rgba(0, 0, 0, 0);
-	background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+	background-image: var(--gradient);
 	color: white;
 	border: none;
-}
-
-.gradient-green {
-	color: white;
-	border: none;
-	background-color: #43e97b;
-}
-
-.gradient-blue {
-	color: white;
-	border: none;
-	background-color: #38f9d7;
 }
 
 p {
@@ -45,7 +54,117 @@ p {
 	}
 }
 
+@keyframes fadein-small {
+	from {
+		opacity: 0;
+		transform: translateY(1rem);
+	}
+}
+
 /* for google material design icons */
 .large-icon {
 	font-size: 48pt !important;
+}
+
+.material-icons {
+	/* no selecting */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+	cursor: default;
+}
+
+.gradient-btn {
+	color: white;
+	background-color: var(--gradientgreen);
+	border: none;
+	cursor: pointer;
+	transition: .2s;
+	padding: 14px;
+	height: auto;
+	text-transform: uppercase;
+	border-radius: var(--std-radius);
+}
+.gradient-btn:hover {
+	background-color: var(--gradientblue);
+}
+.gradient-btn:active {
+	background-color: var(--gradientgreen);
+	transform: translateY(.1rem);
+}
+
+/* buttons on a gradient background */
+.white-btn {
+	color: white;
+	border-radius: var(--std-radius);
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, 0);
+	cursor: pointer;
+	padding: 14px;
+	height: auto;
+	text-transform: uppercase;
+	transition: .2s;
+}
+.white-btn:hover {
+	background-color: rgba(255, 255, 255, .2);
+}
+.white-btn:active {
+	background-color: rgba(255, 255, 255, .4);
+}
+
+.red-btn {
+	color: white;
+	background-color: var(--gradientred);
+	border: none;
+	cursor: pointer;
+	transition: .2s;
+	padding: 14px;
+	height: auto;
+	text-transform: uppercase;
+	border-radius: var(--std-radius);
+}
+.red-btn:hover {
+	background-color: var(--gradientred);
+}
+.red-btn:active {
+	background-color: var(--gradientred);
+	transform: translateY(.1rem);
+}
+
+/*fix table border-top problems */
+.table-user-information>tbody>tr:first-child>td {
+	border-top: none;
+}
+
+.panel {
+	border-radius: var(--std-radius);
+	box-shadow: var(--std-shadow);
+}
+
+/* highlighted text */
+::selection {
+	background: var(--gradientgreen);
+	color: white;
+}
+
+/* form styling */
+input:hover,
+input:focus {
+	outline:none !important;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none !important;
+	border-color: #ccc;
+}
+
+input:not(#post-submit) {
+	height: 45px !important;
+	border: 1px solid #ddd !important;
+	font-size: 16px !important;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
 }

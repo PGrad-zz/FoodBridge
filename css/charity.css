@@ -1,17 +1,13 @@
 .jumbotron{
     padding: 0.5em 0.6em;
-    p {
-        font-size: 1.2em;
-        .btn {
-            padding: 0.5em;
-        }
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
 .jumbotron h1 {
-    /*font-size: 2em;*/
-    margin-bottom: 0px;
-		margin-left: 20px;
-    margin-top: 5px;
+	vertical-align: baseline;
+	margin: 20px;
 }
 
 body {
@@ -19,11 +15,7 @@ body {
 }
 
 .logoutButton {
-		position:absolute;
-    top:0;
-    right:0;
-    margin-top: 35px;
-    margin-right: 20px;
+	float: right;
 }
 
 ul {
@@ -60,14 +52,27 @@ p.post-donor{
 	border-width: 2px !important;
 }
 .posting{
-	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-	margin-bottom: 4px;
+	box-shadow: var(--std-shadow);
+	margin-bottom: 1rem;
+	cursor: pointer;
+	transition: .1s;
 }
 
 .posting:hover{
-	background-color: #e6e6e6;
+	box-shadow: var(--hov-shadow);
+	transform: translateY(-.1rem);
 }
 
-li{
-	display: none;
+li {
+	list-style: none;
+}
+
+.panel.posting {
+	border: none;
+	animation: fadein-small .2s;
+}
+
+.adding:hover{
+  box-shadow: var(--add-shadow);
+  transform: translateY(-.1rem);
 }
