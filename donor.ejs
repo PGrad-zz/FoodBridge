@@ -74,7 +74,7 @@
                                                 <div class='post-description'><%= post.description.slice(0, 15) %></div>
                                             </span>
                                     <span class='col-md-4'>
-                                      <%if (post.stat == "open"){%>
+                                      <%if (post.status == "open"){%>
                                                <form action="/posts/update" method="post">
                                                     <button type="button" class="btn gradient-btn claimed-btn" name ="claimed"  list_id="<%= post._id %>" onclick="sendRequest(this, 'claimed');"><i class="material-icons">check</i></span> Claimed</button>
                                     </form>
