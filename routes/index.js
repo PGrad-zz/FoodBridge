@@ -19,8 +19,8 @@ router.get('/post/new', function(req, res, next){
 });
 
 router.post('/post/new', function(req, res, next){
-	console.log(req.params);
-	res.render('post/index');
+	console.log(req.body);
+	res.redirect('../posts');
 });
 
 router.get('/donor', function(req, res, next) {
