@@ -5,8 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var MongoClient = require("mongodb").MongoClient;
-var mongo_config = require("./config/mongodb_config")
+var mongo_config = require("./config/mongodb_config");
 var fs = require("fs");
+var queryHandlers = require("./query_handlers.js");
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -48,7 +49,7 @@ app.use(function(err, req, res, next) {
 
 fs.stat("./mongodb_config_local.json", function(fs_err, stats){
 	if(fs_err == null){
-		console.log("Using a local route"); 
+		console.log("Using a local route");
 		MongoClient.connect("mongodb://localhost:27017/foodbridge", function(err, database){
 			if(err == null){
 				app.use(function(req, res, next){
@@ -65,7 +66,7 @@ fs.stat("./mongodb_config_local.json", function(fs_err, stats){
 				console.log(err);
 			}
 		})
-		
+
 	} else{
 		console.log("joining remote server");
 		MongoClient.connect(mongo_config.uri, function(err, database){
@@ -84,5 +85,6 @@ fs.stat("./mongodb_config_local.json", function(fs_err, stats){
 		})
 	}
 })
+
 
 module.exports = app;
