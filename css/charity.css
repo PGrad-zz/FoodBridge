@@ -1,26 +1,73 @@
-.list-group-item { 
-	height: 125px;
+.jumbotron{
+    padding: 0.5em 0.6em;
+    p {
+        font-size: 1.2em;
+        .btn {
+            padding: 0.5em;
+        }
+    }
+}
+.jumbotron h1 {
+    /*font-size: 2em;*/
+    margin-bottom: 0px;
+		margin-left: 20px;
+    margin-top: 5px;
 }
 
-.left {
-	 /*#float: left;*/
+body {
+	background-color: #f2f2f2;
 }
 
-.fridgeHeader{
-	height: 150px;
-	background-color: green;
-}
-.right {
-	 float: right;
+.logoutButton {
+		position:absolute;
+    top:0;
+    right:0;
+    margin-top: 35px;
+    margin-right: 20px;
 }
 
-.bottom{
-	float: left;
+ul {
+	 list-style-type: none;
+}
 
+.fieldType {
+	text-align:right;
 }
-.bottom {
-	display: block;
+
+.post-description{
+	color: #cccccc
 }
-.description{
-	color: ;
+
+/* Charity Side-Bar */
+p{
+	margin: 0;
+	padding: 0;
+}
+
+p.post-name{
+	font-size: 24pt;
+	font-weight: bold;
+}
+p.post-donor{
+	font-size: 14pt;
+	font-style: italic;
+}
+
+.claimed-btn, .completed-btn, .expired-btn{
+	width: 100%;
+	margin-bottom: 4px;
+	border-color: grey;
+	border-width: 2px !important;
+}
+.posting{
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+	margin-bottom: 4px;
+}
+
+.posting:hover{
+	background-color: #e6e6e6;
+}
+
+li{
+	display: none;
 }
