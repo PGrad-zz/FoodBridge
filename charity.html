@@ -8,41 +8,119 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!-- our css -->
     <link rel="stylesheet" href="css/charity.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
 </head>
 
 <body>
+    <div class="jumbotron text-left bg-gradient">
+        <h1 class="maintitle"><strong>Fridge</strong></h1>
+        <button type="button" class="btn gradient-green logoutButton">Log Out</button><br>
+    </div>
     <div class="container">
-        <span class="col-md-4">
-	 <div class="panel panel-default">
-	 this is a test
-	 </div>
-</span>
-        <span class="col-md-8">
-    <div class="panel panel-default">
-        <div class="panel-body">
-        <div class='row'>
-            <span class='col-md-8'>
-            	<div>Name: </div>
-                <div>Company: </div>
-                <div>Quantity: </div>
-                <div>Details: <div class ="description"> </div> </div>
+        <div class="row">
+            <span class="col-md-4">
+            	<div class="panel panel-default">
+                	<div>
+                          <table class="table table-user-information">
+                            <tbody>
+                              <tr>
+                                <td>Charity:</td>
+                                <td>Generic Charity Name</td>
+                              </tr>
+                              <tr>
+                                <td>Address:</td>
+                                <td>Dreary Lane</td>
+                              </tr>
+                              <tr>
+                                <td>Ratings:</td>
+                                <td>5/5</td>
+                              </tr>
+                                <td>Website:</td>
+                                <td>muffins.com</td>
+                              </tr>
+                                <td>Description:</td>
+                                <td>we give out muffins</td>
+                              </tr>
+                              <tr>
+                                <td>Email:</td>
+                                <td><a href="mailto:info@support.com">muffins@muffins.com</a></td>
+                              </tr>
+                                <td>Phone Number:</td>
+                                <td>1-805-111-1111</td>
+                              </tr>
+
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
             </span>
-            <span class='col-md-4'>
-				<button type="button" class="btn btn-default">Claimed</button><br>
-                <button type="button" class="btn btn-default">Expired</button><br>
-                <button type="button" class="btn btn-default">Completed</button>
+            <span class='col-md-8' >
+                <ul>
+                    <li>
+                        <div class="panel panel-default posting">
+                            <div class="panel-body">
+                                <span class='col-md-8'>
+                                    <p class='post-name'>Extra Pepperoni Pizza</p>
+                                    <p class='post-donor'> Lyft, Inc </p>
+                                    <p>12 and a half pizzas</p>
+                                    <div class='post-description'>The pizza was from Dominoes. There are three ...</div>
+                                </span>
+                                <span class='col-md-4'>
+                                    <br>
+                                     <p class='post-contact'> Contact at: </p>
+                                     <br>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="panel panel-default posting">
+                            <div class="panel-body">
+                                <span class='col-md-8'>
+                                    <p class='post-name'>Burritos and Tamales</p>
+                                    <p class='post-donor'> Zynga </p>
+                                    <p>40 half burritos</p>
+                                    <div class='post-description'>about 2/3 of them are vegetarian and...</div>
+                                </span>
+                                <span class='col-md-4'>
+                                    <br>
+                                     <p class='post-contact'> Contact at: </p>
+                                     <br>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="panel panel-default posting">
+                            <div class="panel-body">
+                                <span class='col-md-8'>
+                                    <p class='post-name'>Trays of Rice and Beef</p>
+                                    <p class='post-donor'> Github </p>
+                                    <p>2 trays of food</p>
+                                    <div class='post-description'>we have two full trays of...</div>
+                                </span>
+                                <span class='col-md-4'>
+                                    <br>
+                                     <p class='post-contact'> Contact at: </p>
+                                     <br>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </span>
-        </div>
-        <div>
-        	Test
-        </div>
         </div>
     </div>
-    </span>
-    </div>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+
+
+    <script src="js/charity.js"></script>
 </body>
 
 </html>

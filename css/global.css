@@ -1,5 +1,12 @@
+html {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+}
+
 body {
 	font-family: "Open Sans";
+	overflow-x: hidden;
 }
 
 /* the heading font for the logo */
@@ -25,4 +32,20 @@ body {
 	color: white;
 	border: none;
 	background-color: #38f9d7;
+}
+
+p {
+	font-size: 12pt;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+		transform: translateY(5rem);
+	}
+}
+
+/* for google material design icons */
+.large-icon {
+	font-size: 48pt !important;
 }
