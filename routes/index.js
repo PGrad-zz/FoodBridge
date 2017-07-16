@@ -3,7 +3,6 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	console.log(req.db.collection);
   res.render('index', { title: 'Express' });
 });
 
@@ -17,13 +16,13 @@ router.post('/donor/login', function(req, res){
 		else{
 			if(record.password == req.body.password){
 				console.log("password correct");
-				res.redirect("../posts");	
+				res.redirect("../posts");
 			}
 			else{
 				console.log("password wrong");
 				res.redirect("../");
 			}
-			
+
 		}
 	})
 })
@@ -38,12 +37,12 @@ router.post('/charity/login', function(req, res){
 		else{
 			if(record.password == req.body.password){
 				console.log("password correct");
-				res.redirect("../posts");	
+				res.redirect("../posts");
 			}
 			else{
 				console.log("password wrong");
 				res.redirect("../");
-			}			
+			}
 		}
 	})
 });
@@ -75,13 +74,13 @@ router.post('/register', function(req, res){
 		}
 		else{
 			if(record.length){
-				console.log("Account already made for this email");	
+				console.log("Account already made for this email");
 			}
 			else{
 				accnt.insert(account, function(err, data){
 				console.log("Inserting account record");
 				});
-			}			
+			}
 		}
 	})
 	orgs.find({email: req.body.email} , function(err, record){
@@ -92,16 +91,16 @@ router.post('/register', function(req, res){
 		else{
 			if(record.length){
 				console.log("Account already made for this email");
-				res.redirect("../");	
+				res.redirect("../");
 			}
 			else{
 				orgs.insert(organization, function(err, data){
 				console.log("Inserting organization record");
 				res.redirect("../posts");
 				});
-			}			
+			}
 		}
-	}) 
+	})
 });
 
 router.get('/posts', function(req, res, next) {
@@ -124,7 +123,7 @@ router.post('/post/new', function(req, res, next){
 		quantity: req.body.quantity,
 		rating: 0,
 		organization: "none",
-		description: "string",
+		description: req.body.description,
 		claimant: "none",
 		expired: false,
 		phone: req.body.phone,
