@@ -4,8 +4,9 @@
   "description": "The backend for the FoodBridge app",
   "main": "index.js",
   "dependencies": {
-    "node": "^0.0.0",
-    "formidable": "1.1.1"
+    "formidable": "1.1.1",
+    "mongodb": "^2.2.30",
+    "node": "^0.0.0"
   },
   "devDependencies": {
     "nodemon": "1.11.0"
