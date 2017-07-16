@@ -71,6 +71,11 @@ p.post-donor{
 	transform: translateY(-.1rem);
 }
 
+.adding:hover{
+  box-shadow: var(--add-shadow);
+  transform: translateY(-.1rem);
+}
+
 li{
 	display: none;
 }
