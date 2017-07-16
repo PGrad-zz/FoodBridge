@@ -51,7 +51,32 @@ p {
 	}
 }
 
+@keyframes fadein-small {
+	from {
+		opacity: 0;
+		transform: translateY(1rem);
+	}
+}
+
 /* for google material design icons */
 .large-icon {
 	font-size: 48pt !important;
+}
+
+.gradient-btn {
+	color: white;
+	background-color: var(--gradientgreen);
+	border: none;
+	cursor: pointer;
+	transition: .2s;
+	padding: 14px 0;
+	height: auto;
+	text-transform: uppercase;
+}
+.gradient-btn:hover {
+	background-color: var(--gradientblue);
+}
+.gradient-btn:active {
+	background-color: var(--gradientgreen);
+	transform: translateY(.1rem);
 }
