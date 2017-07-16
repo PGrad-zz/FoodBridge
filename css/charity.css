@@ -13,37 +13,36 @@
     margin-top: 5px;
 }
 
-.left {
-	 /*#float: left;*/
+body {
+	background-color: #f2f2f2;
+}
+
+.logoutButton {
+	position:absolute;
+    top:0;
+    right:0;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+ul {
+	 list-style-type: none;
 }
 
 .fieldType {
 	text-align:right;
 }
 
-.fridgeHeader{
-	height: 150px;
-	background-color: green;
-}
-.right {
-	 float: right;
+.post-description{
+	color: #cccccc
 }
 
-.bottom{
-	float: left;
-
-}
-.bottom {
-	display: block;
-}
-.description{
-	color: ;
-}
 /* Charity Side-Bar */
 p{
 	margin: 0;
 	padding: 0;
 }
+
 p.post-name{
 	font-size: 24pt;
 	font-weight: bold;
@@ -55,7 +54,20 @@ p.post-donor{
 
 .claimed-btn, .completed-btn, .expired-btn{
 	width: 100%;
+	margin-bottom: 4px;
+	border-color: grey;
+	border-width: 2px !important;
 }
 .posting{
 	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+	margin-bottom: 4px;
 }
+
+.posting:hover{
+	background-color: #e6e6e6;
+}
+
+li{
+	display: none;
+}
+
