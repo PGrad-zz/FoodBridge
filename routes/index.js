@@ -120,7 +120,7 @@ router.post('/register', function(req, res){
 				orgs.insert(organization, function(err, data){
 				console.log("Inserting organization record");
 
-				res.redirect("../posts");
+				res.redirect("../");
 				});
 			}
 		}
