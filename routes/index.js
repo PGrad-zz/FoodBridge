@@ -126,7 +126,7 @@ router.post('/register', function(req, res){
 });
 
 router.get('/posts', function(req, res, next) {
-	var posts = req.db.collection("order").find().toArray(function(err, results){
+	var posts = req.db.collection("order").find({status: "open"}).toArray(function(err, results){
 		console.log(app.locals.user);
 		res.render('posts', {posts: results.reverse(), user: app.locals.user});
 	});
