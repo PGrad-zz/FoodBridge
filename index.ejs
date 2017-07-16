@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!-- Bootstrap links -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- our css -->
+	<link rel="stylesheet" href="css/landing.css">
+	<link rel="stylesheet" href="css/global.css">
+
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<title>Fridge</title>
+</head>
+<body class="bg-gradient">
+	<div class="jumbotron text-center bg-gradient">
+		<h1 class="maintitle"><strong>Fridge</strong></h1>
+		<p><em>connecting food to people</em></p>
+	</div>
+
+	<!-- login form -->
+	<div class="container" id="registration">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-4">
+								<a class="active" id="donor-login-form-link">Donor Login</a>
+							</div>
+							<div class="col-xs-4">
+								<a class="" id="charity-login-form-link">Charity Login</a>
+							</div>
+							<div class="col-xs-4">
+								<a id="register-form-link">Register</a>
+							</div>
+						</div>
+						<hr>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form id="donor-login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
+									<div class="form-group">
+										<input type="text" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" value="" required="required">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required="required">
+									</div>
+									<div class="form-group text-center">
+										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+										<label for="remember"> Remember Me</label>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control gradient-btn" value="Donor Login">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="text-center">
+													<a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								<form id="charity-login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: none;">
+									<div class="form-group">
+										<input type="text" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" value="" required="required">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required="required">
+									</div>
+									<div class="form-group text-center">
+										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+										<label for="remember"> Remember Me</label>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control gradient-btn" value="Charity Login">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="text-center">
+													<a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								<form id="register-form" action="https://phpoll.com/register/process" method="post" role="form" style="display: none;">
+									<div class="form-group">
+										<input type="text" name="orgname" id="orgname" tabindex="1" class="form-control" placeholder="Organization Name" value="" required="required">
+									</div>
+									<div class="form-group">
+										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" value="" required="required">
+									</div>
+									<div class="form-group">
+										<input type="text" name="address" id="address" tabindex="1" class="form-control" placeholder="Address" value="" required="required">
+									</div>
+									<div class="form-group">
+										<input type="text" name="website" id="website" tabindex="1" class="form-control" placeholder="Website" value="" required="required">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required="required">
+									</div>
+									<div class="form-group">
+										<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required="required" ">
+									</div>
+									<div class="form-group form-control" id="company-role">
+										I am a: &nbsp;
+										<label class="radio-inline"> 
+											<input type="radio" name="role" value="Donor" required="required"> Donor
+										</label>
+										<label class="radio-inline"> 
+											<input type="radio" name="role" value="Charity" required="required"> Charity
+										</label>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control gradient-btn" value="Register Now">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="about-container">
+		<div class="text-center">
+			<h1><em>About Fridge</em></h1>
+			<br>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<p class="lead">
+						San Francisco is missing 29 million meals per year, while Marin is missing 9 million meals per year.
+					</p>
+					<p>
+						Fridge aims to bring those numbers down by redistributing leftover food from private events, tech company lunches, grocery stores, and any other situation where pre-packaged food will go to waste.
+					</p>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="container">
+		  <div class="row">
+		    <div class="col-sm-4 text-center"><i class="material-icons large-icon">person_pin_circle</i>
+			    <p class="text-left">
+			    	A donor (anybody from large corporations to hosts of private events) makes a post detailing the amount of food, location and pickup window, along with some contact information.
+			    </p>
+		    </div>
+		    <div class="col-sm-4 text-center"><i class="material-icons large-icon">local_shipping</i>
+			    <p class="text-left">
+			    	A registered charity can browse listings and "claim" a post by contacting the original donor and verifying the pickup with them, and arrange for a delivery time and date.
+			    </p>
+		    </div>
+		    <div class="col-sm-4 text-center"><i class="material-icons large-icon">local_dining</i>
+			    <p class="text-left">
+			    	After pickup, the charity will be able to distribute the leftover food. Excessive waste is eliminated, and donors get to quantify their donation through our metrics viewer.
+			    </p>
+		    </div>
+		  </div>
+		</div>
+
+		<div class="container">
+			<br>
+			<div class="row small">
+				<div class="col-md-9 col-md-offset-1">
+					Copyright 2017 #team_skynet
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- our JS code -->
+	<script src="js/landing.js"></script>
+</body>
+</html>

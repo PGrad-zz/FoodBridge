@@ -141,4 +141,30 @@ p {
 
 .panel {
 	border-radius: var(--std-radius);
+	box-shadow: var(--std-shadow);
+}
+
+/* highlighted text */
+::selection {
+	background: var(--gradientgreen);
+	color: white;
+}
+
+/* form styling */
+input:hover,
+input:focus {
+	outline:none !important;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none !important;
+	border-color: #ccc;
+}
+
+input:not(#post-submit) {
+	height: 45px !important;
+	border: 1px solid #ddd !important;
+	font-size: 16px !important;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
 }
