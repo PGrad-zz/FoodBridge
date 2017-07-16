@@ -142,6 +142,7 @@ p {
 .panel {
 	border-radius: var(--std-radius);
 	box-shadow: var(--std-shadow);
+	border: none;
 }
 
 /* highlighted text */
@@ -160,11 +161,27 @@ input:focus {
 	border-color: #ccc;
 }
 
-input:not(#post-submit) {
+input:not(#post-submit):not([type='checkbox']) {
 	height: 45px !important;
 	border: 1px solid #ddd !important;
 	font-size: 16px !important;
 	-webkit-transition: all 0.1s linear;
 	-moz-transition: all 0.1s linear;
 	transition: all 0.1s linear;
+}
+
+.no-deco {
+	text-decoration: none !important;
+}
+a.no-deco:visited {
+	color: #333 !important;
+}
+
+.gradient-btn, .white-btn {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }

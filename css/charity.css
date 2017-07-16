@@ -55,7 +55,7 @@ p.post-donor{
 	box-shadow: var(--std-shadow);
 	margin-bottom: 1rem;
 	cursor: pointer;
-	transition: .1s;
+	transition: .2s;
 }
 
 .posting:hover{
@@ -72,7 +72,22 @@ li {
 	animation: fadein-small .2s;
 }
 
+.adding {
+	cursor: pointer;
+	transition: .2s;
+}
 .adding:hover{
-  box-shadow: var(--add-shadow);
+  box-shadow: var(--hov-shadow);
   transform: translateY(-.1rem);
+}
+.adding-btn{
+	color: var(--gradientgreen);
+}
+
+
+.submit-text {
+	transition: .2s;
+}
+.panel:hover .submit-text{
+	color: var(--gradientgreen);
 }
