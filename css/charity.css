@@ -71,3 +71,8 @@ li {
 	border: none;
 	animation: fadein-small .2s;
 }
+
+.adding:hover{
+  box-shadow: var(--add-shadow);
+  transform: translateY(-.1rem);
+}
