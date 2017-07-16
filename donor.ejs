@@ -76,11 +76,11 @@
                                     <span class='col-md-4'>
                                       <%if (post.stat == "open"){%>
                                                <form action="/posts/update" method="post">
-                                                    <button type="button" class="btn gradient-btn claimed-btn" name ="claimed"  list_id="<%= post._id %>" onclick="sendRequest(this, 'claimed');"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Claimed</button>
+                                                    <button type="button" class="btn gradient-btn claimed-btn" name ="claimed"  list_id="<%= post._id %>" onclick="sendRequest(this, 'claimed');"><i class="material-icons">check</i></span> Claimed</button>
                                     </form>
                                     <br>
                                     <form action="/posts/update" method="post">
-                                        <button type="button" class="btn red-btn expired-btn" name="expired" list_id="<%= post._id %>" onclick="sendRequest(this, 'expired');"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Expired</button>
+                                        <button type="button" class="btn red-btn expired-btn" name="expired" list_id="<%= post._id %>" onclick="sendRequest(this, 'expired');"><i class="material-icons">close</i> Expired</button>
                                     </form>
                                     <%}%>
                                     </span>
