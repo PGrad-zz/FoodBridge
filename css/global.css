@@ -169,3 +169,10 @@ input:not(#post-submit):not([type='checkbox']) {
 	-moz-transition: all 0.1s linear;
 	transition: all 0.1s linear;
 }
+
+.no-deco {
+	text-decoration: none !important;
+}
+a.no-deco:visited {
+	color: #333 !important;
+}
