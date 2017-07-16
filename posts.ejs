@@ -16,10 +16,7 @@
 </head>
 
 <body>
-    <div class="jumbotron text-left bg-gradient">
-        <h1 class="maintitle"><strong>Fridge</strong></h1>
-        <span type="button" class="white-btn">Log Out</span>
-    </div>
+  <% include ./templates/header.html %>
     <div class="container">
         <div class="row">
             <span class="col-md-4">
@@ -29,25 +26,21 @@
                             <tbody>
                               <tr>
                                 <td>Charity:</td>
-                                <td>Generic Charity Name</td>
+                                <td><%= user.name %></td>
                               </tr>
                               <tr>
                                 <td>Address:</td>
-                                <td>Dreary Lane</td>
+                                <td><%= user.address %></td>
                               </tr>
                               <tr>
                                 <td>Ratings:</td>
                                 <td>5/5</td>
                               </tr>
                                 <td>Website:</td>
-                                <td>muffins.com</td>
-                              </tr>
-                                <td>Description:</td>
-                                <td>we give out muffins</td>
-                              </tr>
+                                <td><%= user.website %></td>
                               <tr>
                                 <td>Email:</td>
-                                <td><a href="mailto:info@support.com">muffins@muffins.com</a></td>
+                                <td><a href="mailto:<%= user.email %>"><%= user.email %></a></td>
                               </tr>
                                 <td>Phone Number:</td>
                                 <td>1-805-111-1111</td>

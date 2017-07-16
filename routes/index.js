@@ -15,6 +15,10 @@ router.get('/', function(req, res, next) {
 	res.render('index');
 });
 
+router.get('/logout', function(req, res, next) {
+	app.locals.user = null;
+	res.redirect("/");
+});
 
 router.post('/donor/login', function(req, res){
 	var accnt = req.db.collection("account");
