@@ -110,7 +110,12 @@ li {
 	font-size: 24pt;
 	cursor: pointer !important;
 }
-.expander.flipped {
+
+.expander {
+	color: #bbb;
+}
+
+.expander.flipped:hover {
 	color: var(--gradientgreen);
 }
 
