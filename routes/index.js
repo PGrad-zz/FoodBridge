@@ -7,9 +7,20 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/charity', function(req, res, next) {
-	console.log(req.db.collection);
-  res.render('charity');
+router.get('/posts', function(req, res, next) {
+	var posts = req.db.collection("order").find().toArray(function(err, results){
+		console.log({posts: results});
+	});
+  	res.render('posts');
+});
+
+router.get('/post/new', function(req, res, next){
+	res.render('post/index');
+});
+
+router.post('/post/new', function(req, res, next){
+	console.log(req.body);
+	res.redirect('../posts');
 });
 
 router.get('/donor', function(req, res, next) {
@@ -18,3 +29,4 @@ router.get('/donor', function(req, res, next) {
 });
 
 module.exports = router;
+
