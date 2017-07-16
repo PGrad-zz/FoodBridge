@@ -63,10 +63,11 @@ p.post-donor{
 	transform: translateY(-.1rem);
 }
 
-li{
-	display: none;
+li {
+	list-style: none;
 }
 
 .panel.posting {
 	border: none;
+	animation: fadein-small .2s;
 }

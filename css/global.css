@@ -22,6 +22,7 @@ body {
 /* the heading font for the logo */
 .maintitle {
 	font-family: "Patua One";
+	cursor: default;
 	/* no selecting */
 	-webkit-touch-callout: none; /* iOS Safari */
 	-webkit-user-select: none; /* Safari */
