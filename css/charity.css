@@ -54,6 +54,7 @@ p.post-donor{
 	margin-bottom: 4px;
 	border-color: grey;
 	border-width: 2px !important;
+	border: none;
 }
 .posting{
 	box-shadow: var(--std-shadow);
@@ -108,7 +109,6 @@ li {
 	right: 1rem;
 	transition: .15s;
 	font-size: 24pt;
-	cursor: pointer !important;
 }
 
 .expander {
@@ -131,6 +131,20 @@ li {
 	color: #bbb;
 }
 
+
+.btn {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none !important;
+}
+.btn>i {
+	cursor: pointer;
+}
+.btn:hover {
+	color: white;
+}
+
 .map{
   width: 98%;
   margin-left: 1%;
@@ -138,3 +152,4 @@ li {
 	border-bottom-width: 1px;
 	border-color: #f0f0f0;
 }
+
