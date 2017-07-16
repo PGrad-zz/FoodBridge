@@ -61,7 +61,7 @@
                                     <p class='post-name'><%= post.title %></p>
                                     <p class='post-donor'> <%= post.organization %></p>
                                     <p><%= post.quantity %></p>
-                                    <div class='post-description'><%= post.description.slice(0,15) %></div>
+                                    <div class='post-description'><%= post.description.length > 15?post.description.slice(0,15)+"...":post.description %></div>
                                     <div class="panel-hidden">
                                     <br>
                                         <div class="post-description-expanded">

@@ -158,7 +158,7 @@ router.post('/post/new', function(req, res, next){
 	req.db.collection("order").insert(newPost, function(err, records){
   	console.log("Record added as "+records);
 	});
-	res.redirect('../posts');
+	res.redirect('../donor');
 });
 
 router.post('/post/update', function(req, res){
