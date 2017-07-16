@@ -27,7 +27,7 @@ ul {
 }
 
 .post-description{
-	color: #cccccc
+	color: #999;
 }
 
 /* Charity Side-Bar */
@@ -90,4 +90,30 @@ li {
 }
 .panel:hover .submit-text{
 	color: var(--gradientgreen);
+}
+
+/* panel expansion stuff */
+/* the hidden body text of the panel */
+.panel-hidden {
+	display: none;
+}
+
+.material-icons.bottomright {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	transition: .15s;
+	font-size: 24pt;
+	cursor: pointer !important;
+}
+.expander.flipped {
+	color: var(--gradientgreen);
+}
+
+.flipped {
+	transform: rotate(180deg);
+}
+
+.expander {
+	display: none;
 }
