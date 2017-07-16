@@ -71,7 +71,7 @@ fs.stat("./mongodb_config_local.json", function(fs_err, stats){
 
 	} else{
 		console.log("joining remote server");
-		MongoClient.connect(mongo_config.uri, function(err, database){
+		MongoClient.connect("mongodb://" + mongo_config.user + ":" + mongo_config.pass + "@" + mongo_config.uri, function(err, database){
 			if(err == null){
 				app.use(function(req, res, next){
 					req.db = database;

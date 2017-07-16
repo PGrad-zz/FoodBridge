@@ -1,0 +1,41 @@
+2017-07-16T04:18:49.071-0700 I CONTROL  [initandlisten] MongoDB starting : pid=11981 port=27017 dbpath=./data/db/ 64-bit host=DESKTOP-HCN0UTP
+2017-07-16T04:18:49.072-0700 I CONTROL  [initandlisten] db version v3.4.6
+2017-07-16T04:18:49.072-0700 I CONTROL  [initandlisten] git version: c55eb86ef46ee7aede3b1e2a5d184a7df4bfb5b5
+2017-07-16T04:18:49.072-0700 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1f 6 Jan 2014
+2017-07-16T04:18:49.072-0700 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-07-16T04:18:49.072-0700 I CONTROL  [initandlisten] modules: none
+2017-07-16T04:18:49.072-0700 I CONTROL  [initandlisten] build environment:
+2017-07-16T04:18:49.073-0700 I CONTROL  [initandlisten]     distmod: ubuntu1404
+2017-07-16T04:18:49.073-0700 I CONTROL  [initandlisten]     distarch: x86_64
+2017-07-16T04:18:49.073-0700 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-07-16T04:18:49.073-0700 I CONTROL  [initandlisten] options: { net: { port: 27017 }, storage: { dbPath: "./data/db/" } }
+2017-07-16T04:18:49.094-0700 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3524M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-07-16T04:18:49.872-0700 E STORAGE  [initandlisten] WiredTiger error (2) [1500203929:872650][11981:0x7f3e180f0d40], file:sizeStorer.wt, WT_SESSION.open_cursor: ./data/db//sizeStorer.wt: handle-open: open: No such file or directory
+2017-07-16T04:18:49.872-0700 E STORAGE  [initandlisten] WiredTiger error (2) [1500203929:872879][11981:0x7f3e180f0d40], file:sizeStorer.wt, WT_SESSION.open_cursor: ./data/db//sizeStorer.wt: handle-open: open: No such file or directory
+2017-07-16T04:18:49.872-0700 I -        [initandlisten] Invariant failure: ret resulted in status UnknownError: 2: No such file or directory at src/mongo/db/storage/wiredtiger/wiredtiger_size_storer.cpp 69
+2017-07-16T04:18:49.872-0700 I -        [initandlisten] 
+
+***aborting after invariant() failure
+
+
+2017-07-16T04:18:49.878-0700 F -        [initandlisten] Got signal: 6 (Aborted).
+
+ 0x7f3e196bf911 0x7f3e196beb29 0x7f3e196bf00d 0x7f3e16c60330 0x7f3e168b6c37 0x7f3e168ba028 0x7f3e18968547 0x7f3e193cd70f 0x7f3e193b7705 0x7f3e193afa25 0x7f3e192a2777 0x7f3e1895485c 0x7f3e189741bb 0x7f3e168a1f45 0x7f3e189d2bbf
+----- BEGIN BACKTRACE -----
+{"backtrace":[{"b":"7F3E1814E000","o":"1571911","s":"_ZN5mongo15printStackTraceERSo"},{"b":"7F3E1814E000","o":"1570B29"},{"b":"7F3E1814E000","o":"157100D"},{"b":"7F3E16C50000","o":"10330"},{"b":"7F3E16880000","o":"36C37","s":"gsignal"},{"b":"7F3E16880000","o":"3A028","s":"abort"},{"b":"7F3E1814E000","o":"81A547","s":"_ZN5mongo25fassertFailedWithLocationEiPKcj"},{"b":"7F3E1814E000","o":"127F70F","s":"_ZN5mongo20WiredTigerSizeStorerC1EP15__wt_connectionRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE"},{"b":"7F3E1814E000","o":"1269705","s":"_ZN5mongo18WiredTigerKVEngineC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_PNS_11ClockSourceES8_mbbbb"},{"b":"7F3E1814E000","o":"1261A25"},{"b":"7F3E1814E000","o":"1154777","s":"_ZN5mongo20ServiceContextMongoD29initializeGlobalStorageEngineEv"},{"b":"7F3E1814E000","o":"80685C"},{"b":"7F3E1814E000","o":"8261BB","s":"main"},{"b":"7F3E16880000","o":"21F45","s":"__libc_start_main"},{"b":"7F3E1814E000","o":"884BBF"}],"processInfo":{ "mongodbVersion" : "3.4.6", "gitVersion" : "c55eb86ef46ee7aede3b1e2a5d184a7df4bfb5b5", "compiledModules" : [], "uname" : { "sysname" : "Linux", "release" : "3.4.0+", "version" : "#1 PREEMPT Thu Aug 1 17:06:05 CST 2013", "machine" : "x86_64" }, "somap" : [ { "b" : "7F3E1814E000", "elfType" : 3, "buildId" : "C25286FEAB1A51FD1C0C00605BFA6244C141CC06" }, { "b" : "7FFFFD2C1000", "elfType" : 3 }, { "b" : "7F3E17BA0000", "path" : "/lib/x86_64-linux-gnu/libssl.so.1.0.0", "elfType" : 3, "buildId" : "48A664AE6B0B4918A3EB0156C6364C4F084232FD" }, { "b" : "7F3E177C0000", "path" : "/lib/x86_64-linux-gnu/libcrypto.so.1.0.0", "elfType" : 3, "buildId" : "6B8997EA892A7FF37AC8CAA8F239D595251889BB" }, { "b" : "7F3E175B0000", "path" : "/lib/x86_64-linux-gnu/librt.so.1", "elfType" : 3, "buildId" : "AC72654C6338205F30190061C0D781CB0039B793" }, { "b" : "7F3E173A0000", "path" : "/lib/x86_64-linux-gnu/libdl.so.2", "elfType" : 3, "buildId" : "EED41ABB999C74882F001C53979CC820ED15BA82" }, { "b" : "7F3E17090000", "path" : "/lib/x86_64-linux-gnu/libm.so.6", "elfType" : 3, "buildId" : "8F0318B9CC6FD523C2587A15C5447ABBB8CD813D" }, { "b" : "7F3E16E70000", "path" : "/lib/x86_64-linux-gnu/libgcc_s.so.1", "elfType" : 3, "buildId" : "36311B4457710AE5578C4BF00791DED7359DBB92" }, { "b" : "7F3E16C50000", "path" : "/lib/x86_64-linux-gnu/libpthread.so.0", "elfType" : 3, "buildId" : "F48E96A1F4A549776CA4167095AD7527720D4B0E" }, { "b" : "7F3E16880000", "path" : "/lib/x86_64-linux-gnu/libc.so.6", "elfType" : 3, "buildId" : "3217CA3A53A930C7BB1E5C83789D09B30B0F3B39" }, { "b" : "7F3E17E00000", "path" : "/lib64/ld-linux-x86-64.so.2", "elfType" : 3, "buildId" : "37AFDBB933B8409476E845DF5FB11BC77CBCEEE6" } ] }}
+ mongod(_ZN5mongo15printStackTraceERSo+0x41) [0x7f3e196bf911]
+ mongod(+0x1570B29) [0x7f3e196beb29]
+ mongod(+0x157100D) [0x7f3e196bf00d]
+ libpthread.so.0(+0x10330) [0x7f3e16c60330]
+ libc.so.6(gsignal+0x37) [0x7f3e168b6c37]
+ libc.so.6(abort+0x148) [0x7f3e168ba028]
+ mongod(_ZN5mongo25fassertFailedWithLocationEiPKcj+0x0) [0x7f3e18968547]
+ mongod(_ZN5mongo20WiredTigerSizeStorerC1EP15__wt_connectionRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE+0x1CF) [0x7f3e193cd70f]
+ mongod(_ZN5mongo18WiredTigerKVEngineC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_PNS_11ClockSourceES8_mbbbb+0xC65) [0x7f3e193b7705]
+ mongod(+0x1261A25) [0x7f3e193afa25]
+ mongod(_ZN5mongo20ServiceContextMongoD29initializeGlobalStorageEngineEv+0x697) [0x7f3e192a2777]
+ mongod(+0x80685C) [0x7f3e1895485c]
+ mongod(main+0x96B) [0x7f3e189741bb]
+ libc.so.6(__libc_start_main+0xF5) [0x7f3e168a1f45]
+ mongod(+0x884BBF) [0x7f3e189d2bbf]
+-----  END BACKTRACE  -----

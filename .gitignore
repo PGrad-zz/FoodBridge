@@ -4,4 +4,3 @@ node_modules/
 ./mongodb_config_local.json
 data/*
 package-lock.json
-mongodb_config_local.json
