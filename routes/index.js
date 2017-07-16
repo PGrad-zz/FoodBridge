@@ -7,4 +7,14 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/charity', function(req, res, next) {
+	console.log(req.db.collection);
+  res.render('charity');
+});
+
+router.get('/donor', function(req, res, next) {
+	console.log(req.db.collection);
+  res.render('donor');
+});
+
 module.exports = router;
