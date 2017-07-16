@@ -30,6 +30,10 @@ ul {
 	color: #999;
 }
 
+.post-contact {
+	cursor: text;
+}
+
 /* Charity Side-Bar */
 p{
 	margin: 0;
@@ -114,6 +118,6 @@ li {
 	transform: rotate(180deg);
 }
 
-.expander {
+.material-icons.expander {
 	display: none;
 }
