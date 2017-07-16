@@ -7,6 +7,103 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.post('/donor/login', function(req, res){
+	var accnt = req.db.collection("account");
+	accnt.find({email: req.body.email}, function(err, record){
+		if(err){
+			console.log("couldn't find record, redirecting");
+			res.redirect("../");
+		}
+		else{
+			if(record.password == req.body.password){
+				console.log("password correct");
+				res.redirect("../posts");	
+			}
+			else{
+				console.log("password wrong");
+				res.redirect("../");
+			}
+			
+		}
+	})
+})
+
+router.post('/charity/login', function(req, res){
+	var accnt = req.db.collection("account");
+	accnt.find({email: req.body.email} , function(err, record){
+		if(err){
+			console.log("couldn't find record, redirecting");
+			res.redirect("../");
+		}
+		else{
+			if(record.password == req.body.password){
+				console.log("password correct");
+				res.redirect("../posts");	
+			}
+			else{
+				console.log("password wrong");
+				res.redirect("../");
+			}			
+		}
+	})
+});
+
+router.post('/register', function(req, res){
+	var orgs = req.db.collection("organization");
+	var accnt = req.db.collection("account");
+	var account = {
+		name: req.body.orgname,
+		email: req.body.email,
+		password: req.body.password,
+		organization: req.body.role,
+		address: req.body.address,
+		website: req.body.website
+	}
+	var organization = {
+		type: req.body.role,
+		name: req.body.orgname,
+		email: req.body.email,
+		password: req.body.password,
+		address: req.body.address,
+		website: req.body.website
+	}
+	console.log(account);
+	accnt.find({email: req.body.email} , function(err, record){
+		if(err){
+			console.log("couldn't find record, redirecting");
+			res.redirect("../");
+		}
+		else{
+			if(record.length){
+				console.log("Account already made for this email");	
+			}
+			else{
+				accnt.insert(account, function(err, data){
+				console.log("Inserting account record");
+				});
+			}			
+		}
+	})
+	orgs.find({email: req.body.email} , function(err, record){
+		if(err){
+			console.log("couldn't find record, redirecting");
+			res.redirect("../");
+		}
+		else{
+			if(record.length){
+				console.log("Account already made for this email");
+				res.redirect("../");	
+			}
+			else{
+				orgs.insert(organization, function(err, data){
+				console.log("Inserting organization record");
+				res.redirect("../posts");
+				});
+			}			
+		}
+	}) 
+});
+
 router.get('/posts', function(req, res, next) {
 	var posts = req.db.collection("order").find().toArray(function(err, results){
 		console.log({posts: results});
