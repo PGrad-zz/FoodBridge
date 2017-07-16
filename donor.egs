@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <!-- Bootstrap links -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- our css -->
+    <link rel="stylesheet" href="css/charity.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Donor | Fridge</title>
+</head>
+
+<body>
+    <div class="jumbotron text-left bg-gradient">
+        <h1 class="maintitle"><strong>Fridge</strong></h1>
+        <span type="button" class="white-btn">Log Out</span>
+    </div>
+    <div class="container">
+        <div class="row">
+            <span class="col-md-4">
+            	<div class="panel panel-default">
+                	<div>
+                          <table class="table table-user-information">
+                            <tbody>
+                              <tr>
+                                <td>Donor:</td>
+                                <td>Big Wasteful Company, Inc</td>
+                              </tr>
+                              <tr>
+                                <td>Address:</td>
+                                <td>Dreary Lane</td>
+                              </tr>
+                              <tr>
+                                <td>Ratings:</td>
+                                <td>5.5/5</td>
+                              </tr>
+                                <td>Number of Donations:</td>
+                                <td>45</td>
+                              </tr>
+                              <tr>
+                                <td>Email:</td>
+                                <td><a href="mailto:info@support.com">muffins@muffins.com</a></td>
+                              </tr>
+                                <td>Phone Number:</td>
+                                <td>1-805-111-1111</td>
+                              </tr>
+
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </span>
+            <span class='col-md-8'>
+                <ul><li>
+                <div class="panel panel-default adding posting">
+                    <a href="post/index.html" class="no-deco">
+                        <div class='panel-body'>
+                            <span class='col-md-10'><p class="post-name submit-text">Create a New Posting</p></span>
+                        </div>
+                    </a>
+
+                </div>
+                </li>
+                <li>
+                <div class="panel panel-default posting">
+                    <div class="panel-body">
+                        <span class='col-md-8'>
+                            <p class='post-name'>Extra Pepperoni Pizza</p>
+                            <p class='post-donor'> Lyft, Inc </p>
+                            <p>12 and a half pizzas</p>
+                            <div class='post-description'>The pizza was from Dominoes. There are three ...</div>
+                        </span>
+                        <span class='col-md-4'>
+                            <button type="button" class="btn gradient-btn claimed-btn"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Claimed</button><br>
+                            <button type="button" class="btn gradient-btn completed-btn"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Completed</button><br>
+                            <button type="button" class="btn red-btn expired-btn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Expired</button>
+                        </span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="panel panel-default posting">
+                    <div class="panel-body">
+                        <span class='col-md-8'>
+                            <p class='post-name'>Burritos and Tamales</p>
+                            <p class='post-donor'> Zynga </p>
+                            <p>40 half burritos</p>
+                            <div class='post-description'>about 2/3 of them are vegetarian and...</div>
+                        </span>
+                        <span class='col-md-4'>
+                            <button type="button" class="btn gradient-btn claimed-btn"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Claimed</button><br>
+                            <button type="button" class="btn gradient-btn completed-btn"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Completed</button><br>
+                            <button type="button" class="btn red-btn expired-btn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Expired</button>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li>
+
+                <div class="panel panel-default posting">
+                    <div class="panel-body">
+                        <span class='col-md-8'>
+                            <p class='post-name'>Trays of Rice and Beef</p>
+                            <p class='post-donor'> Github </p>
+                            <p>2 trays of food</p>
+                            <div class='post-description'>we have two full trays of...</div>
+                        </span>
+                        <span class='col-md-4'>
+                            <button type="button" class="btn gradient-btn claimed-btn"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Claimed</button><br>
+                            <button type="button" class="btn gradient-btn completed-btn"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Completed</button><br>
+                            <button type="button" class="btn red-btn expired-btn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Expired</button>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            </span>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/charity.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+</body>
+
+</html>
