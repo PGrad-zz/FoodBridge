@@ -67,6 +67,14 @@ function contractAll(domList) {
     contractPost($(domList).find(".posting.expanded"))
 }
 
+function sendRequest(statusButton, status){
+    $.ajax({
+      type: "POST",
+      url: "/post/update",
+      data: {id: $(statusButton).attr("list_id") , stat: status}
+    });
+}
+
 $(document).ready(function() {
     //a hack to let the expander also expand the parent on click
     $(".expander").click(function(e) {

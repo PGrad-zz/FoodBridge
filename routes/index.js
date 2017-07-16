@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var mongo = require('mongodb');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -47,10 +48,6 @@ router.post('/charity/login', function(req, res){
 				console.log("password wrong");
 				res.redirect("../");
 			}
-<<<<<<< HEAD
-=======
-			
->>>>>>> a37e632a073517af6bc40f873889467f0f5687c7
 		}
 	})
 });
@@ -146,12 +143,40 @@ router.post('/post/new', function(req, res, next){
 });
 
 router.post('/post/update', function(req, res){
-	
+	var id = new mongo.ObjectID(req.body.id);
+	var stat = req.body.stat;
+	var posts = req.db.collection("order");
+	console.log(id);
+	console.log(stat);
+	console.log(req.body);
+	posts.find({ _id: id}).toArray(function(err, results){
+		if(err){
+			console.log(err.status);
+		}
+		else if(results.length){
+
+			posts.update({_id: id}, {$set: {status: stat}}, function(err, data){
+				if(err){
+					console.log("err: " + error.status);
+				}
+				else{
+					console.log("changed status");	
+				}
+			})
+		}
+		else{
+			console.log("not updating");
+		}
+	})
+
 })
 
 router.get('/donor', function(req, res, next) {
-	console.log(req.db.collection);
-  res.render('donor');
+  // add logic for specific organizations
+  var posts = req.db.collection("order").find().toArray(function(err, results){
+		console.log({posts: results});
+		res.render('donor', {posts: results});
+	});
 });
 
 module.exports = router;
